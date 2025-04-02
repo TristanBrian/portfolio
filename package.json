@@ -1,0 +1,21 @@
+{
+  "name": "hack-project",
+  "version": "1.0.0",
+  "description": "A project utilizing Typed.js and particles.js",
+  "main": "main.js",
+  
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "live-server"
+  },
+  "devDependencies": {
+      "vite": "^5.4.2"
+    },
+    "dependencies": {
+      "three": "^0.161.0",
+      "particles.js": "^2.0.0",
+      "typed.js": "^2.1.0"
+  }
+}
