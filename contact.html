@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav>
-            <div class="logo">Tristan.dev $</div>
+            <div class="logo">Tristan.dev</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -19,24 +19,52 @@
             </ul>
         </nav>
     </header>
-<main>
-    <div id="particles-js"></div>
-        <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-            <div class="form-group">
-                <input type="text" id="name" name="name" placeholder="Name" required>
+    <main>
+        <div id="particles-js"></div>
+        <section id="contact" class="contact-form">
+            <h2>Have a project in mind</h2>
+            <h2>Hit me up and lets build !</h2>
+
+<form id="contact-form" action="/api/contact" method="POST" aria-labelledby="contact">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <span class = "error-message" id = "name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <span class = "error-message" id = "email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    <span class = "error-message" id = "message-error"></span>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn">Send Message</button>
+                <a href="https://wa.me/254712046110" 
+                   class="btn whatsapp-btn"
+                   target="_blank">
+                   <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+                <div id ="formStatus">  </div>
+            </form>
+            <div class="social-links-container">
+<div class="social-links">
+    <a href="mailto:lessusbrian7@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i> Email</a>
+    <a href="https://github.com/TristanBrian/" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://www.linkedin.com/in/tristan-bryan-0986372b9/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                </div>
             </div>
-            <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Email" required>
-            </div>
-            <div class="form-group">
-                <textarea id="message" name="message" placeholder="Message" required></textarea>
-            </div>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script type="module" src="/main.js"></script>   
+        </section>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script type="module" src="/main.js"></script>   
+    </main>
+    <footer>
+        <p>© 2025 Tristan.dev | Brian Kioko. All rights reserved.</p>
+    </footer>
 </body>
 </html>
