@@ -1,12 +1,14 @@
-# hack-project
+# Portfolio Project
+A sleek Developer portfolio showcasing skills and my current projects.
 
 ## Description
-A project utilizing Typed.js and particles.js, showcasing the skills and expertise of Brian Kioko as a cybersecurity specialist and web developer.
+A project utilizing Html,javascript, Typed.js and particles.js, showcasing the skills and expertise of Brian Kioko as a cybersecurity specialist and web developer.
 
 ## Table of Contents
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Project Structure](#project-structure)
 - [Skills & Expertise](#skills--expertise)
 - [Contact](#contact)
 
@@ -18,6 +20,7 @@ To install the project dependencies, run the following command:
 ```bash
 npm install
 ```
+Make sure you have Node.js and npm installed on your machine. You can download them from [Node.js official website](https://nodejs.org/).
 
 ## Usage
 To run the project, use the following commands:
@@ -25,6 +28,39 @@ To run the project, use the following commands:
 - To build the project: `npm run build`
 - To preview the built project: `npm run preview`
 - To start a live server: `npm start`
+
+## Cloning the Repository
+To clone the repository and run the project locally, follow these steps:
+1. Clone the repository using Git:
+   ```bash
+   git clone https://github.com/TristanBrian/portfolio
+   ```
+2. Navigate into the project directory:
+   ```bash
+   cd portfolio
+   ```
+3. Install the project dependencies:
+   ```bash
+   npm install
+   ```
+4. Run the project using the desired command from the **Usage** section.
+
+## Project Structure
+```
+/hack-project
+│
+├── index.html          # Main HTML file
+├── about.html          # About page
+├── contact.html        # Contact page
+├── projects.html       # Projects page
+├── skills.html         # Skills page
+├── counter.js          # JavaScript for counter functionality
+├── main.js             # Main JavaScript file
+├── server.js           # Server setup file
+├── package.json        # Project metadata and dependencies
+├── package-lock.json   # Lock file for dependencies
+└── style.css           # Main stylesheet
+```
 
 ## Skills & Expertise
 ### Web Development
@@ -40,4 +76,4 @@ To run the project, use the following commands:
 - Penetration Testing
 
 ## Contact
-For inquiries, you can reach me at [your-email@example.com].
+For inquiries, you can reach me at [lessusbrian7@gmail.com].
