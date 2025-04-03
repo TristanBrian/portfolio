@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Featured Projects | Tristan.dev</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Tristan.dev $</div>
+            <div class="logo">Tristan.dev</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -18,61 +19,89 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <div class="button-container">
+            <button id="downcv-button">Download CV</button>
+        </div>
     </header>
     <main>
         <div id="particles-js"></div>
-            <section id="projects" class="projects">
-        <h2>Featured Projects</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-shield-alt project-icon"></i>
-                        <h3>Security Dashboard</h3>
-                    </div>
-                    <p>Real-time security monitoring dashboard for enterprise systems</p>
-                    <div class="project-tech">
-                        <span>JavaScript</span>
-                        <span>WebSocket</span>
-                        <span>Security</span>
-                    </div>
-                    <div class="project-links">
-                        <button class="project-btn" onclick="window.open('https://github.com/yourusername/security-dashboard', '_blank')">
-                            <i class="fab fa-github"></i> View Code
-                        </button>
-                        <button class="project-btn" onclick="window.open('https://security-dashboard-demo.com', '_blank')">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-header">
-                        <i class="fas fa-robot project-icon"></i>
-                        <h3>Threat Detection System</h3>
-                    </div>
-                    <p>AI-powered system for detecting and preventing security threats</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>ML</span>
-                        <span>Security</span>
-                    </div>
-                    <div class="project-links">
-                        <button class="project-btn" onclick="window.open('https://github.com/yourusername/threat-detection', '_blank')">
-                            <i class="fab fa-github"></i> View Code
-                        </button>
-                        <button class="project-btn" onclick="window.open('https://threat-detection-demo.com', '_blank')">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </button>
+        <section id="projects" class="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fas fa-shield-alt project-icon"></i>
+                            <h3>Maybach Liqour Store</h3>
+                        </div>
+                        <p>Fullstack Ecommerce website.Build with React, Node.js, Express.js, MongoDB</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>WebSocket</span>
+                            <span>Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/TristanBrian/sipbooker-batch-keeper" class="project-btn" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="https://maybach-liquor-q3i7y1kh7-tristanbrians-projects.vercel.app/" class="project-btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
                     </div>
                 </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fas fa-robot project-icon"></i>
+                            <h3>Mwananchi hardware</h3>
+                        </div>
+                        <p>Fullstack website with real time inventory and automated feedbacks</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>ML</span>
+                            <span>Security</span>
+                            <span>WebSocket</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/TristanBrian/orderly-tools-warehouse" class="project-btn" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="https://mwananchi-owqnloidn-tristanbrians-projects.vercel.app/" class="project-btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fas fa-robot project-icon"></i>
+                            <h3>Suzzy Snack Bar</h3>
+                        </div>
+                        <p>Ai powered Fullstack website, with automated bookings and customer Preference selections</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>AI & ML</span>
+                            <span>JavaScript</span>
+                            <span>Mern</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/TristanBrian/suzzy-bar" class="project-btn" target="_blank">
+                                <i class="fab fa-github"></i> View Code
+                            </a>
+                            <a href="https://suzzy-e1goxtdxa-tristanbrians-projects.vercel.app/" class="project-btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
             </div>
-        </div>
-    </div>
         </section>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script type="module" src="main.js"></script>   
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script type="module" src="main.js"></script>   
+    </main>
+    <footer>
+        <p>© 2025 Tristan.dev | Brian Kioko. All rights reserved.</p>
+    </footer>
 </body>
 </html>
