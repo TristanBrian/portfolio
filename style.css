@@ -80,11 +80,11 @@ nav {
 /* Centering the button */
 .button-container {
     position: absolute; /* Position it absolutely within the header */
-    top: 10px;
+    top: 10px; /* Adjust the top position */
     right: 20px; 
     display: flex;
     justify-content: center;
-    margin-top: 0; 
+    margin-top: 0; /* Remove margin-top since it's now positioned */
 }
 
 /* Hero Section */
@@ -559,11 +559,9 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
-        display: flex;
-        flex-direction: column; /* Stack links vertically */
-        gap: 1rem; /* Add space between links */
+        display: none;
     }
-
+    
     .stats {
         grid-template-columns: 1fr;
     }
@@ -575,19 +573,6 @@ footer {
 
     .project-links {
         flex-direction: column;
-    }
-
-    header {
-        padding: 1rem; /* Adjust header padding */
-    }
-
-    .hero {
-        height: auto; /* Allow hero section to adjust height */
-        padding: 1rem; /* Adjust padding */
-    }
-
-    .about, .contact, .projects {
-        padding: 2rem 1rem; /* Adjust padding for sections */
     }
 }
 
