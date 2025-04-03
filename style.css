@@ -62,6 +62,31 @@ nav {
     text-decoration: underline; /* Add underline on hover */
 }
 
+#downcv-button {
+    background-color: paleturquoise; /* Bootstrap primary color */
+    color: rgb(5, 5, 5);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Space above the button */
+}
+
+#downcv-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Centering the button */
+.button-container {
+    position: absolute; /* Position it absolutely within the header */
+    top: 10px;
+    right: 20px; 
+    display: flex;
+    justify-content: center;
+    margin-top: 0; 
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -74,6 +99,7 @@ nav {
 }
 
 #particles-js {
+    pointer-events: none; /* Allow clicks to pass through */
     position: absolute;
     width: 100%;
     height: 100%;
@@ -142,6 +168,11 @@ nav {
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
+.h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
 
 .stats {
     display: grid;
@@ -164,6 +195,112 @@ nav {
     background: rgba(255, 255, 255, 0.2); /* Change background color on hover */
 }
 
+.about {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.about h2 {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.about h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.about h3 {
+    color: var(--primary-color);
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.about p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.expertise-list {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.expertise-list li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    list-style-type: none;
+    padding-left: 1.5rem;
+}
+
+.expertise-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* Stats Section */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 12px;
+    transition: var(--transition);
+    color: var(--white);
+    box-shadow: 0 5px 15px rgba(58, 134, 255, 0.3);
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(58, 134, 255, 0.4);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
 /* Skills Section */
 .skills {
     padding: 5rem 2rem;
@@ -202,6 +339,34 @@ nav {
     color: var(--primary-color);
 }
 
+/* Styles for skill cards */
+.skill-card {
+    background: var(--accent-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 1rem 0; /* Add margin for spacing */
+}
+
+.skill-card:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.2); /* Shadow effect */
+}
+
+.skill-card i {
+    font-size: 2rem; /* Increase icon size */
+    color: var(--primary-color);
+    margin-bottom: 0.5rem; /* Space between icon and text */
+}
+
+/* Centering the Skills heading */
+.skills h2 {
+    text-align: center;
+    margin-bottom: 2rem; /* Add margin for spacing */
+    color: var(--primary-color); /* Ensure the heading color matches the theme */
+}
+
 /* Projects Section */
 .projects {
     padding: 5rem 2rem;
@@ -213,11 +378,10 @@ nav {
     display: flex; /* Keep flexbox layout */
     flex-wrap: wrap; /* Allow wrapping of items */
     gap: 20px; 
-    /* Add gap between cards */
 }
 
 .project-card {
-    width: 50%; /* Set width to fit exactly two cards in a row */
+    width: auto; 
     margin-top: 2rem;
     padding: 1.5rem; /* Adjusted padding for consistency */
     margin: 1rem; /* Added margin for spacing */
@@ -226,6 +390,7 @@ nav {
     overflow: hidden;
     transition: all 0.3s ease;
     position: relative;
+    z-index: 10; /* Added z-index to ensure it is above other elements */
 }
 
 .project-card:hover {
@@ -297,10 +462,37 @@ nav {
 #contact-form {
     max-width: 600px;
     margin: 2rem auto 0;
+    z-index: 10; /* Added z-index to ensure it is above other elements */
 }
 
 .form-group {
     margin-bottom: 1.5rem;
+}
+.error-message{
+    color: #ff4444;
+    font-size: 0.9rem;
+    display: none;
+}
+#formStatus {
+    margin-top:1rem;
+    padding:0.5rem;
+    border-radius:4px;
+    display: none;
+}
+.success {
+    background-color: #dff0db;
+    color : #3c763d;
+    display: block;
+}
+.error{
+    background-color: #f2dede;
+    color : #a94442;
+    display: block;
+}
+
+.loading {
+    opacity: 0.7 ;
+    cursor: not-allowed;
 }
 
 input, textarea {
@@ -333,6 +525,30 @@ button:hover {
     opacity: 0.9;
 }
 
+/* Centering the Contact heading */
+.contact h2 {
+    text-align: center;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    position: relative; /* Added position */
+    z-index: 10; /* Added z-index */
+}
+
+.social-links a {
+    color: var(--gray);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary);
+}
 /* Footer */
 footer {
     text-align: center;
@@ -358,12 +574,6 @@ footer {
     .project-links {
         flex-direction: column;
     }
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
 }
 
 /* Animations */
