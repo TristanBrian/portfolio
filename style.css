@@ -559,9 +559,11 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        gap: 1rem; /* Add space between links */
     }
-    
+
     .stats {
         grid-template-columns: 1fr;
     }
@@ -573,6 +575,19 @@ footer {
 
     .project-links {
         flex-direction: column;
+    }
+
+    header {
+        padding: 1rem; /* Adjust header padding */
+    }
+
+    .hero {
+        height: auto; /* Allow hero section to adjust height */
+        padding: 1rem; /* Adjust padding */
+    }
+
+    .about, .contact, .projects {
+        padding: 2rem 1rem; /* Adjust padding for sections */
     }
 }
 
