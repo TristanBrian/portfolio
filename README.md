@@ -2,7 +2,7 @@
 A sleek Developer portfolio showcasing skills and my current projects.
 
 ## Description
-A project utilizing Html,javascript, Typed.js and particles.js, showcasing the skills and expertise of Brian Kioko as a cybersecurity specialist and web developer.
+A project utilizing Html,javascript, Typed.js and particles.js, showcasing the skills and expertise of Tristan.Dev as a cybersecurity specialist and web developer.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -47,7 +47,7 @@ To clone the repository and run the project locally, follow these steps:
 
 ## Project Structure
 ```
-/hack-project
+/portfolio
 │
 ├── index.html          # Main HTML file
 ├── about.html          # About page
@@ -74,6 +74,9 @@ To clone the repository and run the project locally, follow these steps:
 - SSL/TLS Implementation
 - Security Auditing
 - Penetration Testing
+
+## Acknowledgement
+Special Thanks to Power Learn Project (plp Feb 2025 cohort) for the opportunity to develop this project. This project is a part of the Power Learn Project's curriculum.
 
 ## Contact
 For inquiries, you can reach me at [lessusbrian7@gmail.com].
