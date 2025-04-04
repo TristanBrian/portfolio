@@ -1,4 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
+
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.toggle('active');
+            body.classList.toggle('menu-open');
+            navToggle.setAttribute('aria-expanded', 
+                navLinks.classList.contains('active') ? 'true' : 'false'
+            );
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+                navLinks.classList.remove('active');
+                body.classList.remove('menu-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close menu when pressing Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                body.classList.remove('menu-open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
     const cvButton = document.getElementById('downcv-button');
     if (cvButton) {
         cvButton.addEventListener('click', () => {
