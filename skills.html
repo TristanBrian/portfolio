@@ -4,82 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills & Expertise | Tristan.dev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="main-header">
+        <nav class="main-nav">
             <div class="logo">Tristan.dev</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="skills.html">Skills</a></li>
+                <li><a href="skills.html" aria-current="page">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <div class="button-container">
-            <button id="downcv-button">Download CV</button>
-        </div>
     </header>
-    <main>
-        <div id="particles-js"></div>
-        <section id="skills" class="skills">
-            <h2>Skills & Expertise</h2>
+
+    <main class="skills-main">
+        <div id="particles-js" class="particles-background"></div>
+        
+        <section class="skills-section">
+            <h1 class="skills-heading">Technical Proficiencies</h1>
+            
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Web Development</h3>
-                    <div class="skill-card">
-                        <i class="fas fa-code"></i>
-                        <p>HTML5 & CSS3</p>
+                <!-- Web Development Skills -->
+                <article class="skill-category" aria-labelledby="webdev-heading">
+                    <h2 id="webdev-heading" class="category-heading">
+                        <i class="fas fa-laptop-code"></i> Web Development
+                    </h2>
+                    <div class="skills-container">
+                        <div class="skill-card">
+                            <i class="fab fa-html5"></i>
+                            <h3>HTML5 & CSS3</h3>
+                            <p>Semantic markup and modern styling techniques</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-js-square"></i>
+                            <h3>JavaScript (ES6+)</h3>
+                            <p>Modern syntax and functional programming</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Responsive Design</h3>
+                            <p>Mobile-first cross-device compatibility</p>
+                        </div>
                     </div>
-                    <div class="skill-card">
-                        <i class="fab fa-js"></i>
-                        <p>JavaScript (ES6+)</p>
+                </article>
+
+                <!-- Security Skills -->
+                <article class="skill-category" aria-labelledby="security-heading">
+                    <h2 id="security-heading" class="category-heading">
+                        <i class="fas fa-shield-alt"></i> Cybersecurity
+                    </h2>
+                    <div class="skills-container">
+                        <div class="skill-card">
+                            <i class="fas fa-lock"></i>
+                            <h3>Application Security</h3>
+                            <p>OWASP Top 10 mitigation strategies</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-user-secret"></i>
+                            <h3>Penetration Testing</h3>
+                            <p>Ethical hacking and vulnerability assessment</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-network-wired"></i>
+                            <h3>Network Security</h3>
+                            <p>Firewall configuration & intrusion detection</p>
+                        </div>
                     </div>
-                    <div class="skill-card">
-                        <i class="fas fa-mobile-alt"></i>
-                        <p>Responsive Design</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-api"></i>
-                        <p>Modern Web APIs</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-bug"></i>
-                        <p>Team Collaboration & Critical Thinking</p>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Security</h3>
-                    <div class="skill-card">
-                        <i class="fas fa-shield-alt"></i>
-                        <p>Web Application Security</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-lock"></i>
-                        <p>SSL/TLS Implementation</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-search"></i>
-                        <p>Security Auditing</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-bug"></i>
-                        <p>Penetration Testing</p>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fas fa-bug"></i>
-                        <p>Collaborative Testing</p>
-                    </div>
-                </div>
+                </article>
             </div>
         </section>
-        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-        <script type="module" src="/main.js"></script>  
     </main>
-    <footer>
-        <p>© 2024 Tristan.dev | Brian Kioko. All rights reserved.</p>
+
+    <footer class="main-footer">
+        <p class="footer-text">© 2025 Tristan.dev | Brian Kioko. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
