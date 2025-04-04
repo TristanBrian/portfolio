@@ -4,28 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me | Tristan.dev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">Tristan.dev</div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <div id="particles-js"></div>
         <section id="contact" class="contact-form">
             <h2>Have a project in mind</h2>
             <h2>Hit me up and lets build !</h2>
 
-<form id="contact-form" action="/api/contact" method="POST" aria-labelledby="contact">
+            <form id="contact-form" action="/api/contact" method="POST" aria-labelledby="contact">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -52,19 +57,22 @@
                 </a>
                 <div id ="formStatus">  </div>
             </form>
+
             <div class="social-links-container">
-<div class="social-links">
-    <a href="mailto:lessusbrian7@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i> Email</a>
-    <a href="https://github.com/TristanBrian/" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
-    <a href="https://www.linkedin.com/in/tristan-bryan-0986372b9/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                <div class="social-links">
+                    <a href="mailto:lessusbrian7@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://github.com/TristanBrian/" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/tristan-bryan-0986372b9/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
                 </div>
             </div>
         </section>
-        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-        <script type="module" src="/main.js"></script>   
     </main>
+
     <footer>
         <p>© 2025 Tristan.dev | Brian Kioko. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
