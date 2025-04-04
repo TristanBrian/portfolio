@@ -1,6 +1,9 @@
 # Portfolio Project
 A sleek Developer portfolio showcasing skills and my current projects.
 
+## Acknowledgement
+Special Thanks to Power Learn Project (plp Feb 2025 cohort) for the opportunity to develop this project. This project is a part of the Power Learn Project's curriculum.
+
 ## Description
 A project utilizing Html,javascript, Typed.js and particles.js, showcasing the skills and expertise of Tristan.Dev as a cybersecurity specialist and web developer.
 
@@ -75,8 +78,6 @@ To clone the repository and run the project locally, follow these steps:
 - Security Auditing
 - Penetration Testing
 
-## Acknowledgement
-Special Thanks to Power Learn Project (plp Feb 2025 cohort) for the opportunity to develop this project. This project is a part of the Power Learn Project's curriculum.
-
 ## Contact
-For inquiries, you can reach me at [lessusbrian7@gmail.com].
+For inquiries, you can reach me at [lessusbrian7@gmail.com]
+Open for collaborations ! Lets create, Lets innovate, Lets build.
