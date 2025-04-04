@@ -1,17 +1,20 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer'); // Import Nodemailer
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000; 
+
+app.use(express.static(__dirname)); // Serve static files
 
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/contactFormDB', {
+mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -32,8 +35,8 @@ const Contact = mongoose.model('Contact', contactSchema);
 const transporter = nodemailer.createTransport({
     service: 'gmail', // Use your email service
     auth: {
-        user: 'lessusbrian7@gmail.com', // Your email
-        pass: '@Bray124' // Your email password or app password
+        user: process.env.EMAIL_USER, 
+        pass: process.env.EMAIL_PASS 
     }
 });
 
@@ -45,7 +48,7 @@ app.post('/api/contact', (req, res) => {
             // Send email
             const mailOptions = {
                 from: req.body.email,
-                to: 'lessusbrian7@gmail.com', // Your email
+                to: 'example@gmail.com', // Your email
                 subject: `Contact Form Submission from ${req.body.name}`,
                 text: `Name: ${req.body.name}\nEmail: ${req.body.email}\nMessage: ${req.body.message}`
             };
