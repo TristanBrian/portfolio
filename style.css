@@ -79,9 +79,9 @@ nav {
 
 /* Centering the button */
 .button-container {
-    position: absolute; /* Position it absolutely within the header */
-    top: 10px; /* Adjust the top position */
-    right: 20px; 
+    position: fixed; /* Change to fixed to position it relative to the viewport */
+    bottom: 20px; /* Position it 20px from the bottom */
+    right: 10px; /* Position it 20px from the right */
     display: flex;
     justify-content: center;
     margin-top: 0; /* Remove margin-top since it's now positioned */
@@ -192,7 +192,6 @@ nav {
 .stat-item:hover {
     transform: scale(1.05); /* Scale effect on hover */
     box-shadow: 0 10px 20px rgba(0, 255, 0, 0.2); /* Shadow effect */
-    background: rgba(255, 255, 255, 0.2); /* Change background color on hover */
 }
 
 .about {
@@ -278,14 +277,15 @@ nav {
 .stat-item {
     text-align: center;
     padding: 2rem 1rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    background: #333333; /* Grey background */
     border-radius: 12px;
     transition: var(--transition);
     color: var(--white);
-    box-shadow: 0 5px 15px rgba(58, 134, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .stat-item:hover {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(58, 134, 255, 0.4);
 }
@@ -301,6 +301,7 @@ nav {
     font-size: 1.1rem;
     opacity: 0.9;
 }
+
 /* Skills Section */
 .skills {
     padding: 5rem 2rem;
@@ -549,6 +550,7 @@ button:hover {
 .social-links a:hover {
     color: var(--primary);
 }
+
 /* Footer */
 footer {
     text-align: center;
@@ -556,32 +558,122 @@ footer {
     background: var(--secondary-color);
 }
 
+.nav-toggle {
+    display: none; /* Hide toggle button by default */
+    cursor: pointer; /* Change cursor to pointer */
+    color: var(--text-color); /* Set color for the toggle icon */
+    font-size: 1.2rem; /* Reduced size of the toggle icon */
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        width: 200px;
+        background: rgba(26, 26, 26, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        transform: translateY(-10px);
+        opacity: 0;
+        transition: all 0.3s ease;
     }
-    
+
+    .nav-links.active {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .nav-toggle {
+        display: flex;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: var(--text-color);
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+
+    .nav-links li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.5rem;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
     .stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack stats on small screens */
     }
-    
+
     .skills-grid,
     .project-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack projects on small screens */
     }
 
     .project-links {
-        flex-direction: column;
+        flex-direction: column; /* Stack project links */
+    }
+
+    #downcv-button {
+        width: 100%; /* Full width button on small screens */
+        position: fixed; /* Keep button fixed */
+        bottom: 20px; /* Position from bottom */
+        right: 20px; /* Position from right */
     }
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem; /* Adjust logo size */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        display: block; /* Show nav links on small screens */
+    }
+
+    #downcv-button {
+        width: 100%; /* Full width button on small screens */
+    }
 }
 
-.visible {
-    animation: fadeIn 0.6s ease forwards;
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex; /* Show nav links on larger screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        padding: 4rem; /* Adjust padding for larger screens */
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero {
+        padding: 5rem; /* Further adjust padding for extra large screens */
+    }
 }
