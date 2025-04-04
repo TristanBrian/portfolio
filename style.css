@@ -79,12 +79,12 @@ nav {
 
 /* Centering the button */
 .button-container {
-    position: fixed; /* Change to fixed to position it relative to the viewport */
-    bottom: 20px; /* Position it 20px from the bottom */
-    right: 10px; /* Position it 20px from the right */
+    position: fixed; 
+    bottom: 20px;
+    right: 10px; 
     display: flex;
     justify-content: center;
-    margin-top: 0; /* Remove margin-top since it's now positioned */
+    margin-top: 0; 
 }
 
 /* Hero Section */
@@ -191,7 +191,7 @@ nav {
 
 .stat-item:hover {
     transform: scale(1.05); /* Scale effect on hover */
-    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.2); /* Shadow effect */
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.2); 
 }
 
 .about {
@@ -358,14 +358,14 @@ nav {
 .skill-card i {
     font-size: 2rem; /* Increase icon size */
     color: var(--primary-color);
-    margin-bottom: 0.5rem; /* Space between icon and text */
+    margin-bottom: 0.5rem;
 }
 
 /* Centering the Skills heading */
 .skills h2 {
     text-align: center;
     margin-bottom: 2rem; /* Add margin for spacing */
-    color: var(--primary-color); /* Ensure the heading color matches the theme */
+    color: var(--primary-color); 
 }
 
 /* Projects Section */
@@ -377,15 +377,15 @@ nav {
 
 .project-grid {
     display: flex; /* Keep flexbox layout */
-    flex-wrap: wrap; /* Allow wrapping of items */
+    flex-wrap: wrap; 
     gap: 20px; 
 }
 
 .project-card {
     width: auto; 
     margin-top: 2rem;
-    padding: 1.5rem; /* Adjusted padding for consistency */
-    margin: 1rem; /* Added margin for spacing */
+    padding: 1.5rem; 
+    margin: 1rem; 
     background: var(--accent-color);
     border-radius: 10px;
     overflow: hidden;
@@ -449,9 +449,9 @@ nav {
 }
 
 .project-btn:hover {
-    background: var(--primary-color); /* Change background on hover */
-    color: var(--secondary-color); /* Change text color on hover */
-    transform: scale(1.05); /* Slightly scale the button on hover */
+    background: var(--primary-color);
+    color: var(--secondary-color); 
+    transform: scale(1.05); 
 }
 
 /* Contact Section */
@@ -559,10 +559,10 @@ footer {
 }
 
 .nav-toggle {
-    display: none; /* Hide toggle button by default */
-    cursor: pointer; /* Change cursor to pointer */
-    color: var(--text-color); /* Set color for the toggle icon */
-    font-size: 1.2rem; /* Reduced size of the toggle icon */
+    display: none;
+    cursor: pointer; 
+    color: var(--text-color); 
+    font-size: 1.2rem; 
     width: 30px;
     height: 30px;
     align-items: center;
@@ -637,10 +637,10 @@ footer {
     }
 
     #downcv-button {
-        width: 100%; /* Full width button on small screens */
-        position: fixed; /* Keep button fixed */
-        bottom: 20px; /* Position from bottom */
-        right: 20px; /* Position from right */
+        width: 100%; 
+        position: fixed; 
+        bottom: 20px; 
+        right: 20px;
     }
 }
 
