@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Tristan.dev</title>
+    <!-- Add Font Awesome for the toggle icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">Tristan.dev</div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -17,51 +22,55 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </nav>
+        </nav>  
+    </header>
+
+    <main>
+        <div id="particles-js"></div>
+        <section id="about" class="about">
+            <!-- Your about content remains the same -->
+            <h2>About Me</h2>
+            <p>Hello! I'm <strong>Brian Kioko</strong>, also known as <strong>Tristan.dev</strong>. I'm a passionate web developer and cybersecurity specialist dedicated to creating secure, efficient, and visually stunning web applications.</p>
+            
+            <h3>My Expertise</h3>
+            <ul>
+                <li>Implementing robust security measures</li>
+                <li>Developing user-friendly web applications</li>
+                <li>Ensuring exceptional user experiences</li>
+                <li>Staying updated with the latest industry trends</li>
+            </ul>
+    
+            <h3>My Goals</h3>
+            <p>I aim to contribute to innovative projects that positively impact users and businesses. I believe in the power of collaboration and enjoy working with diverse teams to achieve common goals.</p>
+    
+            <h3>In My Free Time</h3>
+            <p>I love exploring new technologies, participating in coding challenges, and sharing my knowledge with the developer community. Let's connect and create something amazing together!</p>
+    
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">40+</span>
+                    <span class="stat-label">Secure Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Security Monitoring</span>
+                </div>
+            </div>
+        </section>
         <div class="button-container">
             <button id="downcv-button">Download CV</button>
         </div>
-    </header>
-<main>
-        <div id="particles-js"></div>
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm <strong>Brian Kioko</strong>, also known as <strong>Tristan.dev</strong>. I'm a passionate web developer and cybersecurity specialist dedicated to creating secure, efficient, and visually stunning web applications.</p>
-        
-        <h3>My Expertise</h3>
-        <ul>
-            <li>Implementing robust security measures</li>
-            <li>Developing user-friendly web applications</li>
-            <li>Ensuring exceptional user experiences</li>
-            <li>Staying updated with the latest industry trends</li>
-        </ul>
+    </main>
 
-        <h3>My Goals</h3>
-        <p>I aim to contribute to innovative projects that positively impact users and businesses. I believe in the power of collaboration and enjoy working with diverse teams to achieve common goals.</p>
-
-        <h3>In My Free Time</h3>
-        <p>I love exploring new technologies, participating in coding challenges, and sharing my knowledge with the developer community. Let's connect and create something amazing together!</p>
-
-        <div class="stats">
-            <div class="stat-item">
-                <span class="stat-number">100%</span>
-                <span class="stat-label">Client Satisfaction</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">40+</span>
-                <span class="stat-label">Secure Projects</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">24/7</span>
-                <span class="stat-label">Security Monitoring</span>
-            </div>
-        </div>
-    </section>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script type="module" src="/main.js"></script>   
-    </body>
     <footer>
         <p>© 2024 Tristan.dev | Brian Kioko. All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script type="module" src="main.js"></script>
+</body>
 </html>
